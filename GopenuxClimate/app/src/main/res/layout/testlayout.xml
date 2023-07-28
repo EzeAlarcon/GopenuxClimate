@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="vm"
+            type="com.example.GopenuxClimate.mvvm.WeatherVm" />
+    </data>
+
+    <ScrollView
+
+        android:layout_width="match_parent"
+        android:background="@color/blue"
+        android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blue"
+        android:orientation="vertical">
+
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/materialCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#803C3C3C"
+                    android:layout_margin="16dp"
+                    app:cardElevation="20dp"
+                    style="@style/CustomCardViewStyle">
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.SearchView
+                            android:id="@+id/searchView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"/>
+
+
+
+
+
+                        <TextView
+                            android:id="@+id/cityName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:text="@{vm.cityName}"
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/imageMain"
+                            android:layout_width="180dp"
+                            android:layout_height="180dp"
+                            android:layout_gravity="center"
+                            android:outlineProvider="bounds" />
+
+                        <TextView
+                            android:id="@+id/tempMain"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textColor="@android:color/white"
+                            android:textSize="60sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/descMain"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textColor="@android:color/white"
+                            android:textSize="25sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/dateDayMain"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="4dp"
+                            android:textColor="@android:color/white"
+                            android:textSize="18sp"
+                            android:textStyle="italic" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginStart="4dp"
+                            android:orientation="horizontal">
+
+                            <!-- Column 1 -->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:id="@+id/mainRainIcon"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginBottom="4dp"
+                                    android:src="@drawable/rain" />
+
+                                <TextView
+                                    android:id="@+id/chanceofrain"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="10%"
+                                    android:textColor="@android:color/white" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Chance of rain"
+                                    android:textColor="@android:color/white" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="4dp"
+                                android:background="@android:color/white" />
+
+                            <!-- Column 2 -->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginBottom="4dp"
+                                    android:src="@drawable/wind" />
+
+                                <TextView
+                                    android:id="@+id/windSpeed"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="10%"
+                                    android:textColor="@android:color/white" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Wind Speed"
+                                    android:textColor="@android:color/white" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="4dp"
+                                android:background="@android:color/white" />
+
+                            <!-- Column 3 -->
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginBottom="4dp"
+                                    android:src="@drawable/humidity" />
+
+                                <TextView
+                                    android:id="@+id/humidityMain"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="10%"
+                                    android:textColor="@android:color/white" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Humidity"
+                                    android:textColor="@android:color/white" />
+                            </LinearLayout>
+
+                            <!-- Add more columns as needed -->
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/materialCard"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Today's Forecast"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/next5Days"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="6dp"
+                            android:text="5 Days >"
+                            android:layout_marginRight="10dp"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_margin="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardElevation="20dp"
+                        android:backgroundTint="#80797979"
+
+                        app:cardCornerRadius="20dp">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/forecastRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        android:orientation="vertical"
+                      />
+
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+
+    </ScrollView>
+</layout>

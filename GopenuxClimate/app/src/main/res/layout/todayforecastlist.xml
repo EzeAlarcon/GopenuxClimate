@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TableLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:stretchColumns="*"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <TableRow>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="11:00"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp"
+            android:id="@+id/timeDisplay" />
+
+
+
+
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/cloud"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="4dp"
+            android:id="@+id/imageDisplay" />
+
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="21"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp"
+            android:id="@+id/tempDisplay" />
+
+    </TableRow>
+
+    <TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_span="3"
+            android:background="@android:color/darker_gray" />
+
+    </TableRow>
+
+</TableLayout>
